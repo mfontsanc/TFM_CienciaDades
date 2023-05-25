@@ -1,0 +1,354 @@
+<FullStudy Rank="442724">
+  <Struct Name="Study">
+    <Struct Name="ProtocolSection">
+      <Struct Name="IdentificationModule">
+        <Field Name="NCTId">NCT00001378</Field>
+        <Struct Name="OrgStudyIdInfo">
+          <Field Name="OrgStudyId">940056</Field>
+        </Struct>
+        <List Name="SecondaryIdInfoList">
+          <Struct Name="SecondaryIdInfo">
+            <Field Name="SecondaryId">94-C-0056</Field>
+          </Struct>
+        </List>
+        <Struct Name="Organization">
+          <Field Name="OrgFullName">National Institutes of Health Clinical Center (CC)</Field>
+          <Field Name="OrgClass">NIH</Field>
+        </Struct>
+        <Field Name="BriefTitle">A Pilot Trial of Tamoxifen and 4-HPR (4-N-Hydroxyphenyl Retinamide) in Persons at High Risk for Developing Breast Cancer</Field>
+        <Field Name="OfficialTitle">A Pilot Trial of Tamoxifen and 4-HPR (4-N-Hydroxyphenyl Retinamide) in Persons at High Risk for Developing Breast Cancer</Field>
+      </Struct>
+      <Struct Name="StatusModule">
+        <Field Name="StatusVerifiedDate">November 1999</Field>
+        <Field Name="OverallStatus">Completed</Field>
+        <Struct Name="ExpandedAccessInfo">
+          <Field Name="HasExpandedAccess">No</Field>
+        </Struct>
+        <Struct Name="StartDateStruct">
+          <Field Name="StartDate">January 1994</Field>
+        </Struct>
+        <Struct Name="CompletionDateStruct">
+          <Field Name="CompletionDate">November 2000</Field>
+        </Struct>
+        <Field Name="StudyFirstSubmitDate">November 3, 1999</Field>
+        <Field Name="StudyFirstSubmitQCDate">December 9, 2002</Field>
+        <Struct Name="StudyFirstPostDateStruct">
+          <Field Name="StudyFirstPostDate">December 10, 2002</Field>
+          <Field Name="StudyFirstPostDateType">Estimate</Field>
+        </Struct>
+        <Field Name="LastUpdateSubmitDate">March 3, 2008</Field>
+        <Struct Name="LastUpdatePostDateStruct">
+          <Field Name="LastUpdatePostDate">March 4, 2008</Field>
+          <Field Name="LastUpdatePostDateType">Estimate</Field>
+        </Struct>
+      </Struct>
+      <Struct Name="SponsorCollaboratorsModule">
+        <Struct Name="LeadSponsor">
+          <Field Name="LeadSponsorName">National Cancer Institute (NCI)</Field>
+          <Field Name="LeadSponsorClass">NIH</Field>
+        </Struct>
+      </Struct>
+      <Struct Name="OversightModule"/>
+      <Struct Name="DescriptionModule">
+        <Field Name="BriefSummary">This is a pilot, chemoprevention study. Patients receive fenretinide daily for 25 of every 28 days for 4 months and tamoxifen daily for 23 months, beginning the second month of fenretinide.
+
+Patients are removed from study for unacceptable toxicity, the development of invasive breast cancer, or for dysfunctional uterine bleeding.</Field>
+        <Field Name="DetailedDescription">This is a pilot chemo-prevention study of the combination tamoxifen and 4-HPR in persons at increased risk of developing invasive breast cancer. The objectives of the study are to determine the acute and cumulative toxicity of tamoxifen and 4-HPR in high risk persons; to assess the feasibility of obtaining adequate tissue to study potential intermediate biomarkers of proliferative disease and malignancy using nipple aspiration, four quadrant fine needle aspirates, and breast core needle biopsies; and to study the effects of tamoxifen and 4-HPR on TGF-beta isoforms and the proliferative markers ki67 and PCNA pre- and post-therapy.</Field>
+      </Struct>
+      <Struct Name="ConditionsModule">
+        <List Name="ConditionList">
+          <Field Name="Condition">Breast Cancer</Field>
+          <Field Name="Condition">Breast Neoplasms</Field>
+        </List>
+        <List Name="KeywordList">
+          <Field Name="Keyword">4-Quadrant Fine Needle Aspiration</Field>
+          <Field Name="Keyword">Biomarkers</Field>
+          <Field Name="Keyword">Chemoprevention</Field>
+          <Field Name="Keyword">Nipple Suction Aspirates</Field>
+          <Field Name="Keyword">TGF Beta</Field>
+        </List>
+      </Struct>
+      <Struct Name="DesignModule">
+        <Field Name="StudyType">Interventional</Field>
+        <List Name="PhaseList">
+          <Field Name="Phase">Phase 1</Field>
+        </List>
+        <Struct Name="DesignInfo">
+          <Field Name="DesignPrimaryPurpose">Treatment</Field>
+        </Struct>
+        <Struct Name="EnrollmentInfo">
+          <Field Name="EnrollmentCount">75</Field>
+        </Struct>
+      </Struct>
+      <Struct Name="ArmsInterventionsModule">
+        <List Name="InterventionList">
+          <Struct Name="Intervention">
+            <Field Name="InterventionType">Drug</Field>
+            <Field Name="InterventionName">fenretinide</Field>
+          </Struct>
+        </List>
+      </Struct>
+      <Struct Name="EligibilityModule">
+        <Field Name="EligibilityCriteria">POPULATION CHARACTERISTICS:
+
+Women and men at increased risk for the development of breast cancer by at least one of the following criteria:
+
+Histologically documented ductal carcinoma in situ (DCIS), including DCIS with minimal invasion or microinvasion.
+
+Histologically documented lobular neoplasia, including lobular hyperplasia and lobular carcinoma in situ (LCIS).
+
+Histologically documented atypical ductal hyperplasia in postmenopausal women.
+
+Histologically documented atypical ductal hyperplasia in premenopausal women with 1 first-degree relative (mother or sister) diagnosed with breast cancer.
+
+Histologically documented atypical ductal hyperplasia in premenopausal women with 3 or more relatives diagnosed with breast cancer provided at least 1 is a second-degree relative.
+
+3 or more first- or second-degree relatives diagnosed with breast or ovarian cancer with at least 1 diagnosed with breast cancer.
+
+2 or more premenopausal (under age 50) first-degree relatives diagnosed with breast cancer.
+
+1 or more first-degree relatives diagnosed with breast cancer if at least 1 relative in the extended pedigree had ovarian cancer.
+
+3 or more relatives with breast cancer with at least 1 first-degree relative diagnosed with premenopausal breast cancer.
+
+Previously diagnosed Stage I breast cancer with surgery and/or radiotherapy only (without prior adjuvant chemo- or hormonal therapy).
+
+Positive for the BRCA1/BRCA2 gene.
+
+No history of other invasive breast cancer.
+
+No evidence of malignancy on breast and gynecologic exams.
+
+Participants with a family history of breast cancer will be seen in consultation by the Family Studies Branch, NCI.
+
+PRIOR/CONCURRENT THERAPY:
+
+Mastectomy or lumpectomy plus radiotherapy required prior to entry for patients with DCIS. Patients with DCIS who have participated in protocol NCI-MB-348 eligible.
+
+No participation in any other breast cancer prevention study involving pharmacologic intervention.
+
+No prior chemotherapy or hormonal therapy for invasive breast cancer.
+
+At least 3 months since estrogen or progesterone replacement therapy or hormonal contraceptives.
+
+PATIENT CHARACTERISTICS:
+
+Age: 35 and over.
+
+Performance status: Ambulatory.
+
+Life expectancy: At least 10 years.
+
+Hematopoietic: Complete blood count normal.
+
+Hepatic:
+
+Bilirubin normal.
+
+Alkaline phosphate normal.
+
+AST normal.
+
+PT, PTT normal.
+
+No history of bleeding disorder.
+
+No history of chronic hepatitis or cirrhosis.
+
+Renal:Creatinine less than 1.5 mg/dL.
+
+Cardiovascular:
+
+No history of deep venous thrombosis.
+
+No history of pulmonary embolus.
+
+Other:
+
+No allergy to any study medication.
+
+Capable of tolerating multiple diagnostic procedures.
+
+No history of abnormal vaginal bleeding. Hysterectomy for vaginal bleeding of benign etiology allowed.
+
+No history of retinal disease, macular degeneration, or night blindness.
+
+No medical or psychiatric risk due to nonmalignant systemic disease that would preclude study participation.
+
+No history of malignancy except: Curatively treated nonmelanomatous skin cancer. Curatively treated in situ cervical carcinoma. Hodgkin's disease treated more than 5 years ago.
+
+No pregnant women.
+
+Adequate contraception required of fertile patients during and for 12 months after fenretinide and for 2 months after tamoxifen.</Field>
+        <Field Name="HealthyVolunteers">No</Field>
+        <Field Name="Gender">All</Field>
+        <List Name="StdAgeList">
+          <Field Name="StdAge">Child</Field>
+          <Field Name="StdAge">Adult</Field>
+          <Field Name="StdAge">Older Adult</Field>
+        </List>
+      </Struct>
+      <Struct Name="ContactsLocationsModule">
+        <List Name="LocationList">
+          <Struct Name="Location">
+            <Field Name="LocationFacility">National Cancer Institute (NCI)</Field>
+            <Field Name="LocationCity">Bethesda</Field>
+            <Field Name="LocationState">Maryland</Field>
+            <Field Name="LocationZip">20892</Field>
+            <Field Name="LocationCountry">United States</Field>
+          </Struct>
+        </List>
+      </Struct>
+      <Struct Name="ReferencesModule">
+        <List Name="ReferenceList">
+          <Struct Name="Reference">
+            <Field Name="ReferencePMID">1734106</Field>
+            <Field Name="ReferenceType">background</Field>
+            <Field Name="ReferenceCitation">London SJ, Connolly JL, Schnitt SJ, Colditz GA. A prospective study of benign breast disease and the risk of breast cancer. JAMA. 1992 Feb 19;267(7):941-4. Erratum In: JAMA 1992 Apr 1;267(13):1780.</Field>
+          </Struct>
+          <Struct Name="Reference">
+            <Field Name="ReferencePMID">3965932</Field>
+            <Field Name="ReferenceType">background</Field>
+            <Field Name="ReferenceCitation">Dupont WD, Page DL. Risk factors for breast cancer in women with proliferative breast disease. N Engl J Med. 1985 Jan 17;312(3):146-51. doi: 10.1056/NEJM198501173120303.</Field>
+          </Struct>
+        </List>
+      </Struct>
+    </Struct>
+    <Struct Name="DerivedSection">
+      <Struct Name="MiscInfoModule">
+        <Field Name="VersionHolder">March 02, 2023</Field>
+      </Struct>
+      <Struct Name="ConditionBrowseModule">
+        <List Name="ConditionMeshList">
+          <Struct Name="ConditionMesh">
+            <Field Name="ConditionMeshId">D000001943</Field>
+            <Field Name="ConditionMeshTerm">Breast Neoplasms</Field>
+          </Struct>
+        </List>
+        <List Name="ConditionAncestorList">
+          <Struct Name="ConditionAncestor">
+            <Field Name="ConditionAncestorId">D000009371</Field>
+            <Field Name="ConditionAncestorTerm">Neoplasms by Site</Field>
+          </Struct>
+          <Struct Name="ConditionAncestor">
+            <Field Name="ConditionAncestorId">D000009369</Field>
+            <Field Name="ConditionAncestorTerm">Neoplasms</Field>
+          </Struct>
+          <Struct Name="ConditionAncestor">
+            <Field Name="ConditionAncestorId">D000001941</Field>
+            <Field Name="ConditionAncestorTerm">Breast Diseases</Field>
+          </Struct>
+          <Struct Name="ConditionAncestor">
+            <Field Name="ConditionAncestorId">D000012871</Field>
+            <Field Name="ConditionAncestorTerm">Skin Diseases</Field>
+          </Struct>
+        </List>
+        <List Name="ConditionBrowseLeafList">
+          <Struct Name="ConditionBrowseLeaf">
+            <Field Name="ConditionBrowseLeafId">M4372</Field>
+            <Field Name="ConditionBrowseLeafName">Breast Neoplasms</Field>
+            <Field Name="ConditionBrowseLeafAsFound">Breast Cancer</Field>
+            <Field Name="ConditionBrowseLeafRelevance">high</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseLeaf">
+            <Field Name="ConditionBrowseLeafId">M4370</Field>
+            <Field Name="ConditionBrowseLeafName">Breast Diseases</Field>
+            <Field Name="ConditionBrowseLeafRelevance">low</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseLeaf">
+            <Field Name="ConditionBrowseLeafId">M14826</Field>
+            <Field Name="ConditionBrowseLeafName">Skin Diseases</Field>
+            <Field Name="ConditionBrowseLeafRelevance">low</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseLeaf">
+            <Field Name="ConditionBrowseLeafId">T929</Field>
+            <Field Name="ConditionBrowseLeafName">Camurati-Engelmann Disease</Field>
+            <Field Name="ConditionBrowseLeafRelevance">low</Field>
+          </Struct>
+        </List>
+        <List Name="ConditionBrowseBranchList">
+          <Struct Name="ConditionBrowseBranch">
+            <Field Name="ConditionBrowseBranchAbbrev">BC04</Field>
+            <Field Name="ConditionBrowseBranchName">Neoplasms</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseBranch">
+            <Field Name="ConditionBrowseBranchAbbrev">BC17</Field>
+            <Field Name="ConditionBrowseBranchName">Skin and Connective Tissue Diseases</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseBranch">
+            <Field Name="ConditionBrowseBranchAbbrev">All</Field>
+            <Field Name="ConditionBrowseBranchName">All Conditions</Field>
+          </Struct>
+          <Struct Name="ConditionBrowseBranch">
+            <Field Name="ConditionBrowseBranchAbbrev">Rare</Field>
+            <Field Name="ConditionBrowseBranchName">Rare Diseases</Field>
+          </Struct>
+        </List>
+      </Struct>
+      <Struct Name="InterventionBrowseModule">
+        <List Name="InterventionMeshList">
+          <Struct Name="InterventionMesh">
+            <Field Name="InterventionMeshId">D000017313</Field>
+            <Field Name="InterventionMeshTerm">Fenretinide</Field>
+          </Struct>
+        </List>
+        <List Name="InterventionAncestorList">
+          <Struct Name="InterventionAncestor">
+            <Field Name="InterventionAncestorId">D000000970</Field>
+            <Field Name="InterventionAncestorTerm">Antineoplastic Agents</Field>
+          </Struct>
+          <Struct Name="InterventionAncestor">
+            <Field Name="InterventionAncestorId">D000016588</Field>
+            <Field Name="InterventionAncestorTerm">Anticarcinogenic Agents</Field>
+          </Struct>
+          <Struct Name="InterventionAncestor">
+            <Field Name="InterventionAncestorId">D000020011</Field>
+            <Field Name="InterventionAncestorTerm">Protective Agents</Field>
+          </Struct>
+          <Struct Name="InterventionAncestor">
+            <Field Name="InterventionAncestorId">D000045505</Field>
+            <Field Name="InterventionAncestorTerm">Physiological Effects of Drugs</Field>
+          </Struct>
+        </List>
+        <List Name="InterventionBrowseLeafList">
+          <Struct Name="InterventionBrowseLeaf">
+            <Field Name="InterventionBrowseLeafId">M15555</Field>
+            <Field Name="InterventionBrowseLeafName">Tamoxifen</Field>
+            <Field Name="InterventionBrowseLeafRelevance">low</Field>
+          </Struct>
+          <Struct Name="InterventionBrowseLeaf">
+            <Field Name="InterventionBrowseLeafId">M18754</Field>
+            <Field Name="InterventionBrowseLeafName">Fenretinide</Field>
+            <Field Name="InterventionBrowseLeafAsFound">Whole grains</Field>
+            <Field Name="InterventionBrowseLeafRelevance">high</Field>
+          </Struct>
+          <Struct Name="InterventionBrowseLeaf">
+            <Field Name="InterventionBrowseLeafId">M242839</Field>
+            <Field Name="InterventionBrowseLeafName">Retinamide</Field>
+            <Field Name="InterventionBrowseLeafRelevance">low</Field>
+          </Struct>
+          <Struct Name="InterventionBrowseLeaf">
+            <Field Name="InterventionBrowseLeafId">M21022</Field>
+            <Field Name="InterventionBrowseLeafName">Protective Agents</Field>
+            <Field Name="InterventionBrowseLeafRelevance">low</Field>
+          </Struct>
+        </List>
+        <List Name="InterventionBrowseBranchList">
+          <Struct Name="InterventionBrowseBranch">
+            <Field Name="InterventionBrowseBranchAbbrev">BDCA</Field>
+            <Field Name="InterventionBrowseBranchName">Bone Density Conservation Agents</Field>
+          </Struct>
+          <Struct Name="InterventionBrowseBranch">
+            <Field Name="InterventionBrowseBranchAbbrev">ANeo</Field>
+            <Field Name="InterventionBrowseBranchName">Antineoplastic Agents</Field>
+          </Struct>
+          <Struct Name="InterventionBrowseBranch">
+            <Field Name="InterventionBrowseBranchAbbrev">All</Field>
+            <Field Name="InterventionBrowseBranchName">All Drugs and Chemicals</Field>
+          </Struct>
+        </List>
+      </Struct>
+    </Struct>
+  </Struct>
+</FullStudy>
+

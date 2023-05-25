@@ -1,0 +1,155 @@
+@prefix ocre: <http://purl.org/net/OCRe/OCRe.owl#> .
+@prefix study_design: <http://purl.org/net/OCRe/study_design.owl#> .
+@prefix study_protocol: <http://purl.org/net/OCRe/study_protocol.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ocre:1org_NCT00001378 ocre:OCRE400040 "Bethesda" ;
+    ocre:OCRE744000 "United States" ;
+    ocre:OCRE885000 "20892" .
+
+ocre:NCT00001378 a ocre:OCRE400029 ;
+    ocre:OCRE058000 "Treatment" ;
+    ocre:OCRE189000 """This is a pilot, chemoprevention study. Patients receive fenretinide daily for 25 of every 28 days for 4 months and tamoxifen daily for 23 months, beginning the second month of fenretinide.
+
+Patients are removed from study for unacceptable toxicity, the development of invasive breast cancer, or for dysfunctional uterine bleeding.""" ;
+    ocre:OCRE400076 ocre:1org_NCT00001378 ;
+    ocre:OCRE413000 "This is a pilot chemo-prevention study of the combination tamoxifen and 4-HPR in persons at increased risk of developing invasive breast cancer. The objectives of the study are to determine the acute and cumulative toxicity of tamoxifen and 4-HPR in high risk persons; to assess the feasibility of obtaining adequate tissue to study potential intermediate biomarkers of proliferative disease and malignancy using nipple aspiration, four quadrant fine needle aspirates, and breast core needle biopsies; and to study the effects of tamoxifen and 4-HPR on TGF-beta isoforms and the proliferative markers ki67 and PCNA pre- and post-therapy." ;
+    ocre:OCRE535519 ocre:sp_NCT00001378 ;
+    ocre:OCRE820850 study_design:NCT00001378 ;
+    ocre:OCRE900089 study_protocol:NCT00001378 ;
+    ocre:OCRE900210 "1994-01-01"^^xsd:date ;
+    ocre:OCRE900211 "2000-11-01"^^xsd:date ;
+    ocre:OCRE900212 "A Pilot Trial of Tamoxifen and 4-HPR (4-N-Hydroxyphenyl Retinamide) in Persons at High Risk for Developing Breast Cancer" ;
+    ocre:OCRE900213 "A Pilot Trial of Tamoxifen and 4-HPR (4-N-Hydroxyphenyl Retinamide) in Persons at High Risk for Developing Breast Cancer" ;
+    ocre:OCRE900224 "4-Quadrant Fine Needle Aspiration",
+        "Biomarkers",
+        "Chemoprevention",
+        "Nipple Suction Aspirates",
+        "TGF Beta" ;
+    ocre:OCRE900237 "75"^^xsd:int ;
+    ocre:OCRE901005 ocre:id_NCT00001378 ;
+    ocre:OCRE901007 ocre:rs_NCT00001378 .
+
+ocre:ec_d_NCT00001378 ocre:OCRE900214 """POPULATION CHARACTERISTICS:
+
+Women and men at increased risk for the development of breast cancer by at least one of the following criteria:
+
+Histologically documented ductal carcinoma in situ (DCIS), including DCIS with minimal invasion or microinvasion.
+
+Histologically documented lobular neoplasia, including lobular hyperplasia and lobular carcinoma in situ (LCIS).
+
+Histologically documented atypical ductal hyperplasia in postmenopausal women.
+
+Histologically documented atypical ductal hyperplasia in premenopausal women with 1 first-degree relative (mother or sister) diagnosed with breast cancer.
+
+Histologically documented atypical ductal hyperplasia in premenopausal women with 3 or more relatives diagnosed with breast cancer provided at least 1 is a second-degree relative.
+
+3 or more first- or second-degree relatives diagnosed with breast or ovarian cancer with at least 1 diagnosed with breast cancer.
+
+2 or more premenopausal (under age 50) first-degree relatives diagnosed with breast cancer.
+
+1 or more first-degree relatives diagnosed with breast cancer if at least 1 relative in the extended pedigree had ovarian cancer.
+
+3 or more relatives with breast cancer with at least 1 first-degree relative diagnosed with premenopausal breast cancer.
+
+Previously diagnosed Stage I breast cancer with surgery and/or radiotherapy only (without prior adjuvant chemo- or hormonal therapy).
+
+Positive for the BRCA1/BRCA2 gene.
+
+No history of other invasive breast cancer.
+
+No evidence of malignancy on breast and gynecologic exams.
+
+Participants with a family history of breast cancer will be seen in consultation by the Family Studies Branch, NCI.
+
+PRIOR/CONCURRENT THERAPY:
+
+Mastectomy or lumpectomy plus radiotherapy required prior to entry for patients with DCIS. Patients with DCIS who have participated in protocol NCI-MB-348 eligible.
+
+No participation in any other breast cancer prevention study involving pharmacologic intervention.
+
+No prior chemotherapy or hormonal therapy for invasive breast cancer.
+
+At least 3 months since estrogen or progesterone replacement therapy or hormonal contraceptives.
+
+PATIENT CHARACTERISTICS:
+
+Age: 35 and over.
+
+Performance status: Ambulatory.
+
+Life expectancy: At least 10 years.
+
+Hematopoietic: Complete blood count normal.
+
+Hepatic:
+
+Bilirubin normal.
+
+Alkaline phosphate normal.
+
+AST normal.
+
+PT, PTT normal.
+
+No history of bleeding disorder.
+
+No history of chronic hepatitis or cirrhosis.
+
+Renal:Creatinine less than 1.5 mg/dL.
+
+Cardiovascular:
+
+No history of deep venous thrombosis.
+
+No history of pulmonary embolus.
+
+Other:
+
+No allergy to any study medication.
+
+Capable of tolerating multiple diagnostic procedures.
+
+No history of abnormal vaginal bleeding. Hysterectomy for vaginal bleeding of benign etiology allowed.
+
+No history of retinal disease, macular degeneration, or night blindness.
+
+No medical or psychiatric risk due to nonmalignant systemic disease that would preclude study participation.
+
+No history of malignancy except: Curatively treated nonmelanomatous skin cancer. Curatively treated in situ cervical carcinoma. Hodgkin's disease treated more than 5 years ago.
+
+No pregnant women.
+
+Adequate contraception required of fertile patients during and for 12 months after fenretinide and for 2 months after tamoxifen.""" .
+
+ocre:ec_g_NCT00001378 ocre:OCRE900214 "ALL" .
+
+ocre:id_NCT00001378 a ocre:OCRE400001 ;
+    ocre:OCRE900242 "NCT00001378" .
+
+ocre:rs_NCT00001378 a ocre:OCRE400003,
+        ocre:OCRE400030 .
+
+ocre:sp_NCT00001378 a ocre:OCRE581634 ;
+    ocre:OCRE547004 ocre:NCT00001378 ;
+    ocre:OCRE900224 "National Cancer Institute (NCI)" .
+
+study_design:NCT00001378 a study_design:OCRE100007,
+        study_design:OCRE100056 ;
+    ocre:OCRE741000 study_design:phase_NCT00001378 .
+
+study_design:phase_NCT00001378 a study_design:OCRE100038,
+        study_design:OCRE100067 .
+
+study_protocol:1ep_NCT00001378 a study_protocol:OCRE300000 ;
+    ocre:OCRE900218 "DRUG" ;
+    ocre:OCRE900224 "fenretinide" .
+
+study_protocol:NCT00001378 a study_protocol:OCRE300012,
+        study_protocol:OCRE892807 ;
+    ocre:OCRE693433 ocre:ec_d_NCT00001378,
+        ocre:ec_g_NCT00001378 ;
+    ocre:OCRE900086 "Breast Cancer",
+        "Breast Neoplasms" ;
+    study_protocol:OCRE885707 study_protocol:1ep_NCT00001378 .
+

@@ -1,0 +1,19 @@
+from enum import Enum
+
+
+class InterventionType(Enum):
+    DRUG = 1
+    DEVICE = 2
+    BIOLOGICAL_VACCINE = 3
+    RADIATION = 4
+    BEHAVIORAL = 5
+    GENERIC = 6
+    DIETARY_SUPPLEMENT = 7
+    COMBINATION_PRODUCT = 8
+    DIAGNOSTIC_TEST = 9
+    OTHER = 10
+    PROCEDURE_SURGERY = 11
+    PROCEDURE = 12
+    SURGERY = 13
+    BIOLOGICAL = 14
+    VACCINE = 15

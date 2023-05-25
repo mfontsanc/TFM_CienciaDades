@@ -1,0 +1,6 @@
+
+.idea
+*.pyc
+src/dev/logs/tfm-collaboration-network/debug.log
+src/dev/resources/tmp/*
+src/dev/resources/tmp_2/*
