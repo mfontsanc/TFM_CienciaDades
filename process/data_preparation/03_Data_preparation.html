@@ -14590,11 +14590,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>La preparació de les dades consisteix en 3 pases:</p>
+<p>La preparació de les dades consisteix en 3 passes:</p>
 <ol>
 <li><p>La <strong>descàrrega</strong> dels fitxers de clinicaltrials.gov i el filtratge i <strong>selecció</strong> dels estudis clínics relacionats amb el càncer de mama. Aquí, també s'inclou l'estudi estadístic descriptiu per a entendre quins estudis s'han seleccionat.</p>
 </li>
-<li><p>La <strong>transformació</strong> dels fitxers XML a RDF, seguint la estructura definida per la ontologia <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4019723/">OCRe</a>. En aquest procés de transformació, també es realitza una normalització de les dades (minúcules, passant a dades categòriques, etc.), i una posterior inserció del resultat a la base de dades NoSQL, en aquest cas <a href="https://www.ontotext.com/">GraphDB</a>.</p>
+<li><p>La <strong>transformació</strong> dels fitxers XML a RDF, seguint la estructura definida per la ontologia <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4019723/">OCRe</a>. En aquest procés de transformació, també es realitza una normalització de les dades (minúscules, passant a dades categòriques, etc.), i una posterior inserció del resultat a la base de dades NoSQL, en aquest cas <a href="https://www.ontotext.com/">GraphDB</a>.</p>
 </li>
 <li><p><strong>Implementació</strong> i estructuració de les dades per a ser utilitzar per al model que es desenvolupa en la Fase 4.</p>
 </li>
@@ -14955,7 +14955,7 @@ Amb les dades descarregades anteriorment, hi ha un total de 10,055 fiters XML so
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>L'estudi estadístic descriptiu ha de permetre visualitzar si les dades obtingudes de les fonts de dades estan complertes, què cal normalitzar (si es necessari), i entendre d'una forma global quina informació hi ha.</p>
-<p><br><br>El primer que cal fer és definir les rutes on es gurdaran els fitxers CSV, i posteriorment és realitzarà la lectura de les dades i s'emmagatzemaran en un fitxer CSV per agilitzar el l'estudi estadístic.</p>
+<p><br><br>El primer que cal fer és definir les rutes on es guardaran els fitxers CSV, i posteriorment és realitzarà la lectura de les dades i s'emmagatzemaran en un fitxer CSV per agilitzar el l'estudi estadístic.</p>
 
 </div>
 </div>
@@ -15949,7 +15949,7 @@ En el gràfic superior, es pot observar que els atributs de Condition i MeshCond
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[188]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_collab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">PATH_COLLAB_STATISTICAL_STUDY</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">';'</span><span class="p">)</span>
@@ -15971,7 +15971,7 @@ En el gràfic superior, es pot observar que els atributs de Condition i MeshCond
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[188]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -16461,7 +16461,7 @@ Name: OverallOfficialAffiliation, Length: 3583, dtype: int64</pre>
 <p>En aquest cas, i degut a la complexitat d'aquesta secció, s'ha implementat en un microservei en Python apart. A continuació es descriu com instal·lar i executar el procés:</p>
 <ol>
 <li>Tenir instal·lada la versió de Python 3.9.</li>
-<li>Clonar el repositori TFM del GitHub: <a href="https://github.com/mfontsanc/TFM">https://github.com/mfontsanc/TFM</a></li>
+<li>Clonar el repositori TFM del GitHub: <a href="https://github.com/mfontsanc/TFM_CienciaDades/tree/main/application">https://github.com/mfontsanc/TFM_CienciaDades/tree/main/application</a></li>
 <li>Obrir el projecte amb l'entorn de desenvolupament Python de preferència.</li>
 <li>Instal·lar les llibreries del fitxer requirements.txt.</li>
 <li>Executar el fitxer wsgi.py.</li>
@@ -16480,7 +16480,7 @@ Name: OverallOfficialAffiliation, Length: 3583, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Els resultats d'aquest procéss es guardaran a la carpeta definida en la variable PATH_RESULTS. Aquests resultats són:</p>
+<p>Els resultats d'aquest procés es guardaran a la carpeta definida en la variable PATH_RESULTS. Aquests resultats són:</p>
 <ul>
 <li>Carpeta 'rdf' amb tots els estudis clínics amb format RDF.</li>
 <li>Fitxer 'clinical_trials.tsv' amb la informació sobre els estudis clínics que s'utilitzarà durant la implementació del model.</li>
