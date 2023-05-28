@@ -52,3 +52,5 @@ Per tal d'executar el projecte es pot fer des del mateix entorn Visual Studio Co
 Obrir el Jupyter Notebook i el fitxer prinicpal anomenat "TFM_Maria Font Sánchez.ipynb": https://github.com/mfontsanc/TFM_CienciaDades/blob/main/TFM_Maria%20Font%20S%C3%A1nchez.ipynb 
 
 Des d'aquest fitxer es pot accedir a la resta de Notebooks i executar el codi de l'aplicació Python i inserir les dades.
+
+Les versions HTML dels Jupyter Notebooks es troben accessibles des del següent enllaç: https://mfontsanc.github.io/
