@@ -48,6 +48,8 @@ L'aplicació web desenvolupada per aquest TFM es troba ubicada en la carpeta "fr
 
 Per tal d'executar el projecte es pot fer des del mateix entorn Visual Studio Code: https://shiny.rstudio.com/py/docs/running-debugging.html#running-in-visual-studio-code. 
 
+En cas de voler executar l'aplicació sense haver de realitzar tot el procés d'inserció de dades i càlcul de les similituds i comunitats des del Jupyter Notebook, es pot importar en el repositori de GraphDB totes les dades del següent fitxer: https://github.com/mfontsanc/TFM_CienciaDades/blob/main/results/BBDD_triples.zip (cal prèviament descomprimir el fitxer).
+
 #### Jupyter Notebooks
 Obrir el Jupyter Notebook i el fitxer prinicpal anomenat "TFM_Maria Font Sánchez.ipynb": https://github.com/mfontsanc/TFM_CienciaDades/blob/main/TFM_Maria%20Font%20S%C3%A1nchez.ipynb 
 
