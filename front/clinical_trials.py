@@ -79,7 +79,8 @@ def clinical_trials_server(input, output, session):
         # When a new community is selected, this function is called.
         community_id = input.comunitats()
         # Get the list of clinical trial of a specific community.
-        result = clinical_trials_per_communities[community_id]
+        community = "Comunitat " + community_id
+        result = clinical_trials_per_communities[community]
         result.sort()
         ui.update_selectize(id="clinical_trials", choices=result, selected=result[0])
 

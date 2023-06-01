@@ -19,6 +19,13 @@ select DISTINCT ?ct_id ?comm_id where {
 }
 """
 
+GET_COMM_NAMES = """
+PREFIX tfm: <http://purl.org/net/TFM/communities#>
+select ?comm_id ?comm_name where { 
+    ?comm_id tfm:community_name ?comm_name
+}
+"""
+
 GET_CT_COMM_ID = """
 PREFIX tfm: <http://purl.org/net/TFM/communities#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

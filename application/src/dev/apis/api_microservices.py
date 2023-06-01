@@ -8,6 +8,7 @@ from apis.api_community.namespace_community import api as namespace_community
 from apis.api_community.namespace_get_community import api as namespace_get_community
 from apis.api_community.namespace_get_community_detail import api as namespace_get_community_detail
 from apis.api_community.namespace_get_collaborators import api as namespace_get_collaborators
+from apis.api_community.namespace_get_community_ct import api as namespace_get_collaborators_ct
 from apis.api_community.namespace_get_clinical_trial import api as namespace_get_clinical_trial
 
 blueprint = Blueprint(name=constants.NAME_API, import_name=__name__, url_prefix=constants.END_POINT_API)
@@ -24,4 +25,5 @@ api.add_namespace(namespace_get_community)
 api.add_namespace(namespace_get_community_detail)
 api.add_namespace(namespace_get_collaborators)
 api.add_namespace(namespace_get_clinical_trial)
+api.add_namespace(namespace_get_collaborators_ct)
 

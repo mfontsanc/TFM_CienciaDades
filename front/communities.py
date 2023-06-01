@@ -6,15 +6,15 @@ import pandas as pd
 from pathlib import Path
 
 
-API_URL = "http://127.0.0.1:5000/tfm-collaboration-network/v1/NetworkCollaboration/get_communities"
+API_URL_COMM_CT = "http://127.0.0.1:5000/tfm-collaboration-network/v1/NetworkCollaboration/get_communities_clinical_trials"
 HEADERS = {
     "accept": "application/json",
     "Content-Type": "application/json",
 }
 
-def get_communities():
+def get_communities_ct():
     """
-        Method to retrieve all the communities of the database.
+        Method to retrieve all the communities of the database and its clinical trials.
 
         Parameters:
             None
@@ -22,7 +22,7 @@ def get_communities():
         Returns:
             Dataframe with all communities.
     """
-    r=requests.post(url = API_URL, headers = HEADERS)
+    r=requests.post(url = API_URL_COMM_CT, headers = HEADERS)
     
     return r.json()
 
@@ -78,9 +78,10 @@ def get_similarities():
     df = pd.read_csv(filepath, sep=';')
     df_sim = df['Similarity'].value_counts().to_frame().reset_index()
     return df_sim[1: len(df_sim)]
+
         
 # Variables to load the data once the application starts.
-clinical_trials_communities = get_communities()
+clinical_trials_communities = get_communities_ct()
 df_ct_comm = get_pie_ct_comm()
 df_comm_numb = get_line_comm_number()
 ct_no_communities = get_similarities()
@@ -102,10 +103,11 @@ def community_ui():
 
         ui.br(),
         ui.h6("Estudis clínics sense comunitat"),
-        ui.div("Hi ha un total de 5,952 estudis clínics que no tenen cap altre estudi clínic similar. Per tant, hi ha 661 estudis clínics que tot i tenir altres estudis clínics similars, no s'han agrupat en cap comunitat."),
+        ui.div("Hi ha un total de 5,952 estudis clínics que no tenen cap altre estudi clínic similar, i s'han obviat del següent diagrama per tal de facilitar la comprensió d'aquest. Per tant, hi ha 661 estudis clínics que tot i tenir altres estudis clínics similars, no s'han agrupat en cap comunitat."),
         output_widget("histogram"),
 
-        ui.div("Perquè aquests estudis clínics no es troba en cap comunitat?")
+        ui.div("Perquè aquests estudis clínics no es troben en cap comunitat?"),
+        ui.div("- Principalment perquè els estudis clínics similars han estat assignats a d'altres comunitats amb estudis clínics més similars.")
 )
 
 @module.server

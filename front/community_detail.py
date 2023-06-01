@@ -1,8 +1,7 @@
 from shiny import ui, module, reactive, render
-from communities import get_communities, HEADERS
+from communities import get_communities_ct, HEADERS
 from shinywidgets import output_widget, register_widget
-import matplotlib.pyplot as plt
-from plotly.offline import plot
+from pathlib import Path
 
 import requests
 import networkx as nx
@@ -12,6 +11,7 @@ import pandas as pd
 
 API_URL_DETAIL = "http://127.0.0.1:5000/tfm-collaboration-network/v1/NetworkCollaboration/get_communities_detail"
 API_URL_COLLAB = "http://127.0.0.1:5000/tfm-collaboration-network/v1/NetworkCollaboration/get_collaborators"
+API_URL_COMM = "http://127.0.0.1:5000/tfm-collaboration-network/v1/NetworkCollaboration/get_communities"
 
 def get_communities_details(community_id):
     """
@@ -23,7 +23,6 @@ def get_communities_details(community_id):
         Returns:
             Dataframe: dataframe with the data of the community.
     """
-    community_id = community_id.replace("Comunitat ", "")
     params = {
         "community_id": community_id 
     }
@@ -60,13 +59,19 @@ def get_list_communities():
         Returns:
             List: list of communities as strings.
     """
+    r=requests.post(url = API_URL_COMM, headers = HEADERS)
+    data = r.json()
+
+    communities = {}
+    for d in data:
+        communities[str(d[0])] = d[1]
         
     all_community = ["Comunitat " + str(x[1]) for x in clinical_trials_communities if x[1] != -1]
 
     all_community = list(set(all_community))
     all_community.sort()
 
-    return all_community
+    return communities
 
 def get_list_clinical_trials():  
     """
@@ -92,7 +97,7 @@ def get_list_clinical_trials():
 
     return clinical_trials_community
 
-clinical_trials_communities = get_communities()
+clinical_trials_communities = get_communities_ct()
 clinical_trials_per_communities = get_list_clinical_trials()
 
 
@@ -102,7 +107,7 @@ def community_detail_ui():
         ui.panel_title("Comunitats generades a partir dels estudis clínics"),
         
         ui.div("Llistat de les comunitats generades a partir dels estudis clínics."),
-        ui.input_selectize(id="comunitats", label="  ", choices=get_list_communities(), multiple=False),    
+        ui.input_selectize(id="comunitats", label="  ", choices=get_list_communities(), multiple=False, width=12),    
 
         ui.layout_sidebar(        
             ui.panel_sidebar("Relació dels estudis clínics i els objectius, intervencions o observacions i paraules clau.", output_widget("network_graph")),    
@@ -143,6 +148,7 @@ def community_detail_server(input, output, session):
 
         # Create the widget of the map with the locations of all clinical trials.
         data_collabs = get_collaborators(community_id)
+        print(data_collabs)
         data_location = data_collabs['collaborators']
 
         coordinates = [(x[1], x[2], x[4], x[5], x[3], x[0]) for x in data_location]
@@ -159,11 +165,11 @@ def community_detail_server(input, output, session):
                              "clinical_trial_id": "Estudi clínic"})
         
         register_widget("map_chart", map_chart)
-
-        result = clinical_trials_per_communities[community_id]
+        community = "Comunitat " + community_id
+        result = clinical_trials_per_communities[community]
         result.sort()
         result.insert(0, "All")
-        ui.update_selectize(id="clinical_trials", choices=result, selected=community_id)
+        ui.update_selectize(id="clinical_trials", choices=result, selected=community)
         ui.output_table("result_clinical_trials")
         ui.output_table("result_investigators")
 

@@ -35,6 +35,7 @@ KEY_DOC = 'documentation'
 KEY_NETWORK = 'uoc_tfm_network_collaboration'
 KEY_NETWORK_COMMUNITIES = 'uoc_tfm_network_communities'
 KEY_NETWORK_GET_COMMUNITIES = 'uoc_tfm_network_get_communities'
+KEY_NETWORK_GET_COMMUNITIES_CT = 'uoc_tfm_network_get_communities_clinical_trials'
 KEY_NETWORK_GET_COMMUNITIES_DETAIL = 'uoc_tfm_network_get_communities_detail'
 KEY_NETWORK_GET_COLLABORATORS = 'uoc_tfm_network_get_collaborators'
 KEY_NETWORK_GET_CLINICAL_TRIAL = 'uoc_tfm_network_get_clinical_trial'
@@ -76,7 +77,8 @@ DESCRIPTION_NETWORK_MESSAGE = 'String indicating the result in text.'
 # DOCUMENTATION
 DOCUMENTATION_NETWORK = 'Class to execute the transformation process from XML to RDF, and the insertion to GraphDB.'
 DOCUMENTATION_NETWORK_COMMUNITIES = 'Class to insert the relations between the different clinical trials.'
-DOCUMENTATION_NETWORK_GET_COMMUNITIES = 'Class to get the clinical trials and community data.'
+DOCUMENTATION_NETWORK_GET_COMMUNITIES = 'Class to get the communities.'
+DOCUMENTATION_NETWORK_GET_COMMUNITIES_CT = 'Class to get the clinical trials and community data.'
 DOCUMENTATION_NETWORK_GET_COMMUNITIES_DETAILS = 'Class to get the clinical trials and its properties of ' \
                                                 'one specific community.'
 DOCUMENTATION_NETWORK_GET_COLLABORATORS = 'Class to get the sponsors and collaborators of one specific community.'
@@ -86,6 +88,7 @@ DOCUMENTATION_NETWORK_GET_CLINICAL_TRIAL = 'Class to get all data of one clinica
 END_POINT_NETWORK = "/insert"
 END_POINT_NETWORK_COMMUNITIES = "/insert_communities"
 END_POINT_NETWORK_GET_COMMUNITIES = "/get_communities"
+END_POINT_NETWORK_GET_COMMUNITIES_CT = "/get_communities_clinical_trials"
 END_POINT_NETWORK_GET_COMMUNITIES_DETAIL = "/get_communities_detail"
 END_POINT_NETWORK_GET_COLLABORATORS = "/get_collaborators"
 END_POINT_NETWORK_GET_CLINICAL_TRIAL = "/get_clinical_trial"
@@ -105,6 +108,7 @@ KEY_NAME_RESPONSE_DATA = 'data'
 KEY_NAME_RESPONSE_SPONSORS = 'sponsors'
 KEY_NAME_RESPONSE_PRINCIPAL_INVESTIGATORS = 'principal_investigator'
 KEY_NAME_RESPONSE_COLLABORATORS = 'collaborators'
+KEY_NAME_RESPONSE_COMMUNITIES = 'communities'
 
 # -------------------------------------------- FUNCTIONALITIES -------------------------------------------------------
 
@@ -117,6 +121,10 @@ FUNCTIONALITIES = {
     KEY_NETWORK_GET_COMMUNITIES: {KEY_TITLE: TITLE_NETWORK, KEY_TITLE_END_POINT: END_POINT_NETWORK_GET_COMMUNITIES,
                                   KEY_TITLE_DIRECTORIES: [], KEY_DESCRIPTION: DESCRIPTION_NETWORK,
                                   KEY_DOC: DOCUMENTATION_NETWORK_GET_COMMUNITIES},
+    KEY_NETWORK_GET_COMMUNITIES_CT: {KEY_TITLE: TITLE_NETWORK,
+                                     KEY_TITLE_END_POINT: END_POINT_NETWORK_GET_COMMUNITIES_CT,
+                                     KEY_TITLE_DIRECTORIES: [], KEY_DESCRIPTION: DESCRIPTION_NETWORK,
+                                     KEY_DOC: DOCUMENTATION_NETWORK_GET_COMMUNITIES_CT},
     KEY_NETWORK_GET_COMMUNITIES_DETAIL: {KEY_TITLE: TITLE_NETWORK,
                                          KEY_TITLE_END_POINT: END_POINT_NETWORK_GET_COMMUNITIES_DETAIL,
                                          KEY_TITLE_DIRECTORIES: [], KEY_DESCRIPTION: DESCRIPTION_NETWORK,

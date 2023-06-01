@@ -52,6 +52,28 @@ class SelectData:
         return output_result
 
     @staticmethod
+    def get_community_names():
+        """
+            Method to get the community identifiers and names.
+
+            Parameters:
+
+            Returns:
+                list: List of communities identifiers and names.
+        """
+        query = sparql.GET_COMM_NAMES
+        db_manager = DatabaseManager()
+        results = db_manager.run_select_data(query)
+
+        output_result = []
+        for result in results:
+            comm_id = result['comm_id']['value']
+            comm_id = int(comm_id.replace('http://purl.org/net/TFM/communities#', ""))
+            comm_name = result['comm_name']['value'].encode('utf-8').decode()
+            output_result.append([comm_id, comm_name])
+        return output_result
+
+    @staticmethod
     def get_clinical_trials_collaborators(community_id: int):
         """
             Method to get the clinical trials and their collaborators of a specific community from GraphDB
