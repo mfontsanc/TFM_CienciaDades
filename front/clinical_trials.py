@@ -59,6 +59,14 @@ def clinical_trials_ui():
                 ),
             ),
         ),
+
+        ui.br(),
+        ui.div("Els col·laboradors d'aquest estudi clínic són els patrocinadors i investigadors que hi ha a continunació."),
+        ui.row(
+            ui.column(4, ui.output_table("result_clinical_trials")),
+            ui.column(8, ui.output_table("result_investigators")),
+        ),
+
         ui.br(),
         ui.row(
             ui.column(6, ui.h6("Núvol de paraules clau de l'estudi clínic:")),
@@ -89,6 +97,8 @@ def clinical_trials_server(input, output, session):
         ui.output_table("criteris")
         ui.output_table("intervencions")
         ui.output_table("resultats")
+        ui.output_table("result_clinical_trials")
+        ui.output_table("result_investigators")
     
     @output
     @render.table
@@ -277,4 +287,77 @@ def clinical_trials_server(input, output, session):
                     [dict(selector="th", props=[("text-align", "center")])]
                 ).hide_index()
             )
-    
+
+
+    @output
+    @render.table
+    def result_investigators():     
+        clinical_trial_id = input.clinical_trials()
+
+        if len(clinical_trial_id) > 4:
+            # Get the data from the database
+            data_ct = get_clinical_trials(clinical_trial_id) 
+
+            investigators = data_ct.get("Investigadors")
+
+            return_investigators = []
+            for investigator in investigators:
+                name = investigator["Nom investigador"]
+                role = investigator["Rol"]
+                affiliation = investigator["Afiliació"]
+
+                repeated = [x for x in return_investigators if x[0]==name and x[1]==role and x[2]==affiliation]
+                if len(repeated)==0:
+                    return_investigators.append(investigator)
+
+            return_investigators.sort()
+            df = pd.DataFrame(return_investigators, columns=['Nom de l\'investigador', 'Rol', 'Organització afiliada'])
+            
+            return (
+                df.style.set_table_attributes(
+                    'class="dataframe shiny-table table w-auto"'
+                )
+                .format(
+                    {
+                        "mpg": "{0:0.1f}",
+                        "disp": "{0:0.1f}",
+                        "drat": "{0:0.2f}",
+                        "wt": "{0:0.3f}",
+                        "qsec": "{0:0.2f}",
+                    }
+                )
+                .set_table_styles(
+                    [dict(selector="th", props=[("text-align", "center")])]
+                ).hide_index()
+            )
+
+
+    @output
+    @render.table
+    def result_clinical_trials():
+        clinical_trial_id = input.clinical_trials()
+
+        if len(clinical_trial_id) > 4:
+            # Get the data from the database
+            data_ct = get_clinical_trials(clinical_trial_id) 
+
+            sponsors = data_ct.get("Patrocinador")
+            df = pd.DataFrame([sponsors], columns=['Patrocinadors'])
+            
+            return (
+                df.style.set_table_attributes(
+                    'class="dataframe shiny-table table w-auto"'
+                )
+                .format(
+                    {
+                        "mpg": "{0:0.1f}",
+                        "disp": "{0:0.1f}",
+                        "drat": "{0:0.2f}",
+                        "wt": "{0:0.3f}",
+                        "qsec": "{0:0.2f}",
+                    }
+                )
+                .set_table_styles(
+                    [dict(selector="th", props=[("text-align", "center")])]
+                ).hide_index()
+            )

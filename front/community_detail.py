@@ -1,7 +1,7 @@
 from shiny import ui, module, reactive, render
 from communities import get_communities_ct, HEADERS
 from shinywidgets import output_widget, register_widget
-from pathlib import Path
+import plotly.graph_objects as go
 
 import requests
 import networkx as nx
@@ -122,6 +122,10 @@ def community_detail_ui():
             ui.column(4, ui.output_table("result_clinical_trials")),
             ui.column(8, ui.output_table("result_investigators")),
         ),
+
+        ui.br(),
+        ui.div("Per tal de facilitar la comprensió de quines són les paraules clau, intervencions, la condició estudiada i els objectius que tenen més en comú aquesta comunitat; a continuació es mostra aquest llistat amb el nombre d'estudis clínics que apareixen."),
+        output_widget("sunburst"),
 )
 
 @module.server
@@ -146,9 +150,39 @@ def community_detail_server(input, output, session):
 
         register_widget("network_graph", network_graph)
 
+        # Create widget data use for similarity        
+        list_degrees = graph.degree
+
+        property_names = [] 
+        value_names = []
+        values = []
+        processed = []
+        properties = []
+        for ct in data:
+            if ct[2] not in processed:
+                degree = [x[1] for x in list_degrees if x[0] == ct[2]]
+                property_names.append(ct[1])
+                value_names.append(ct[2].replace(ct[1] + ": ", ""))
+                values.append(degree[0])
+                processed.append(ct[2])
+                properties.append("Estudis clínics")
+
+        sunburst_data = dict(
+            properties=property_names,
+            values=value_names,
+            studies=properties,
+            degree=values)
+        
+        df_sunburst = pd.DataFrame(sunburst_data)
+        fig = px.sunburst(df_sunburst, path=['studies', 'properties', 'values'], values='degree', 
+                          color='degree', color_continuous_scale='Viridis_r',
+                          labels={"degree": "Número d'estudis clínics", 'labels': 'Nom', 'parent': 'Tipus'})
+        
+        register_widget("sunburst", fig)
+
+
         # Create the widget of the map with the locations of all clinical trials.
         data_collabs = get_collaborators(community_id)
-        print(data_collabs)
         data_location = data_collabs['collaborators']
 
         coordinates = [(x[1], x[2], x[4], x[5], x[3], x[0]) for x in data_location]

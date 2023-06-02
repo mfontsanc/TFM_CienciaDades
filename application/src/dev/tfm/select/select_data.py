@@ -46,7 +46,8 @@ class SelectData:
         for result in results:
             ct_id = result['ct_id']['value'].replace("http://purl.org/net/OCRe/OCRe.owl#", "")
             property_name = result['property_name']['value']
-            object_name = result['property_name']['value'] + ": " + result['object']['value']
+            name = result['object']['value'].strip().replace("InterventionModel.", "").replace("ObservationalModel,", "")
+            object_name = result['property_name']['value'] + ": " + name
             output_result.append([ct_id, property_name, object_name])
 
         return output_result
